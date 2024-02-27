@@ -59,7 +59,13 @@ class $modify(ButtonEdit, MenuLayer) {
 
         play->removeFromParent();
         garage->removeFromParent();
-        editor->removeFromParent();
+        // checking for gdlite by YellowCat98
+        if (!this->getChildByID("lite-button")) {
+            editor->removeFromParent();
+        } else {
+            // if gdlite
+            editor->setPosition(322.25, 0);
+        }
 
         menu->setPosition(295, 220);
 
