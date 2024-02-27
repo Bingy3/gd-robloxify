@@ -6,6 +6,7 @@
 	"name": "Robloxify",
 	"developer": "Bingy3",
 	"description": "Changes the Geometry dash logo to Roblox",
+	"repository": "https://github.com/Bingy3/gd-robloxify",
 	"resources": {
 		"spritesheets": {
 			"Regular": [
