@@ -1,2 +1,5 @@
-# gd-robloxify
-Robloxify geometry dash with this new mod!
+# Robloxify
+
+Robloxify your gd
+
+Made by Bingy3

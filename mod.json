@@ -1,0 +1,16 @@
+{
+	"geode": "2.0.0-beta.21",
+	"gd": "2.204",
+	"version": "v1.0.0",
+	"id": "bingy3.robloxify",
+	"name": "Robloxify",
+	"developer": "Bingy3",
+	"description": "Changes the Geometry dash logo to Roblox",
+	"resources": {
+		"spritesheets": {
+			"Regular": [
+				"resources/regular/*.png"
+			]
+		}
+	}
+}
