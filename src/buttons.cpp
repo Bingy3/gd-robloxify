@@ -12,7 +12,6 @@ class $modify(ButtonEdit, MenuLayer) {
         if (!MenuLayer::init()) {return false;}
         
         auto menu = this->getChildByID("main-menu");
-        auto bottomMenu = this->getChildByID("bottom-menu");
 
         auto play = menu->getChildByID("play-button");
         auto garage = menu->getChildByID("icon-kit-button");
