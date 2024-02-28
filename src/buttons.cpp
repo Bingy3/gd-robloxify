@@ -12,6 +12,8 @@ class $modify(ButtonEdit, MenuLayer) {
         if (!MenuLayer::init()) {return false;}
         
         auto menu = this->getChildByID("main-menu");
+        // creating a new menu
+        auto newMenu = CCMenu::create();
 
         auto play = menu->getChildByID("play-button");
         auto garage = menu->getChildByID("icon-kit-button");
@@ -41,33 +43,33 @@ class $modify(ButtonEdit, MenuLayer) {
             menu_selector(MenuLayer::onOptions)
         );
 
-        home->setPosition(200, 50);
-        avatar->setPosition(200, 15);
-        games->setPosition(200, -20);
-        settings->setPosition(200, -55);
+        home->setPosition(284, 210);
+        avatar->setPosition(284, 175);
+        games->setPosition(284, 140);
+        settings->setPosition(284, 105);
         
         home->setID("home-button");
         avatar->setID("avatar-button");
         games->setID("discover-button");
         settings->setID("settings-button");
 
-        menu->addChild(home);
-        menu->addChild(avatar);
-        menu->addChild(games);
-        menu->addChild(settings);
-        menu->setScale(1.15);
+        newMenu->addChild(home);
+        newMenu->addChild(avatar);
+        newMenu->addChild(games);
+        newMenu->addChild(settings);
+        newMenu->setScale(1.15);
 
-        play->removeFromParent();
-        garage->removeFromParent();
+        play->setVisible(false);
+        garage->setVisible(false);
         // checking for gdlite by YellowCat98
         if (!this->getChildByID("lite-button")) {
-            editor->removeFromParent();
-        } else {
-            // if gdlite
-            editor->setPosition(322.25, 0);
+            editor->setVisible(false);
         }
 
-        menu->setPosition(295, 220);
+        newMenu->setPosition(-5, 0);
+        newMenu->setID("robloxify.menu-buttons");
+
+        this->addChild(newMenu);
 
         return true;
     }
