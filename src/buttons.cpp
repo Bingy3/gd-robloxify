@@ -66,7 +66,7 @@ class $modify(ButtonEdit, MenuLayer) {
             editor->setVisible(false);
         }
 
-        newMenu->setPosition(-5, 0);
+        newMenu->setPosition(0, 0);
         newMenu->setID("robloxify.menu-buttons");
 
         this->addChild(newMenu);
