@@ -13,19 +13,24 @@ class $modify(MyMenuLayer, MenuLayer) {
 		}
 
 		auto title = this->getChildByID("main-title");
-		auto newTitle = CCMenuItemSprite::create(
-			CCSprite::createWithSpriteFrameName("roblox-logo.png"_spr),
-			nullptr,
-			nullptr
-		);
+		
+		auto should_use = Mod::get()->getSettingValue<bool>("use-robloxify-logo");
 
-		title->setVisible(false);
+		if (should_use) {
+			auto newTitle = CCMenuItemSprite::create(
+				CCSprite::createWithSpriteFrameName("roblox-logo.png"_spr),
+				nullptr,
+				nullptr
+			);
 
-		newTitle->setID("new-title");
-		newTitle->setPosition(title->getPosition());
-		newTitle->setScale(1.5);
+			title->setVisible(false);
 
-		this->addChild(newTitle);
+			newTitle->setID("new-title");
+			newTitle->setPosition(title->getPosition());
+			newTitle->setScale(1.5);
+
+			this->addChild(newTitle);
+		}
 
 		return true;
 	}

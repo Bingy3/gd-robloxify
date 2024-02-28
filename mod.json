@@ -1,7 +1,7 @@
 {
 	"geode": "2.0.0-beta.21",
 	"gd": "2.204",
-	"version": "v1.0.3",
+	"version": "v1.0.4",
 	"id": "bingy3.robloxify",
 	"name": "Robloxify",
 	"developer": "Bingy3",
@@ -12,6 +12,13 @@
 			"Regular": [
 				"resources/regular/*.png"
 			]
+		}
+	},
+	"settings": {
+		"use-robloxify-logo": {
+			"name": "Use robloxify logo",
+			"type": "bool",
+			"default": true
 		}
 	}
 }
